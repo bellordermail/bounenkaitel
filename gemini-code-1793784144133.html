@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>電話を発信します</title>
+    <script>
+        window.onload = function() {
+            // 電話番号（ハイフンなし）を指定
+            var phoneNumber = "0312345678";
+            
+            // ページが開いた瞬間に tel: スキームを実行
+            window.location.href = "tel:" + phoneNumber;
+        };
+    </script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 14px 28px;
+            background-color: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <p>電話アプリを起動しています...</p>
+    <p>自動で起動しない場合は、以下のボタンをタップしてください。</p>
+    <!-- フォールバック用ボタン -->
+    <a href="tel:0312345678" class="btn">電話をかける</a>
+</body>
+</html>
